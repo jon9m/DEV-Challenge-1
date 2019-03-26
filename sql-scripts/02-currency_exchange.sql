@@ -1,0 +1,37 @@
+CREATE DATABASE  IF NOT EXISTS `currency_exchange`;
+USE `currency_exchange`;
+
+DROP TABLE IF EXISTS `currency`;
+CREATE TABLE `currency` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `currency` varchar(45) DEFAULT NULL,
+  `date` varchar(45) DEFAULT NULL,
+  `time` time DEFAULT NULL,
+  `price` float (20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+LOCK TABLES `currency` WRITE;
+
+INSERT INTO `currency` VALUES 
+	(1,'BTC','20180507','0915', 34.98),
+	(2,'BTC','20180507','1045', 36.13),
+	(3,'BTC','20180507','1230', 37.01),
+	(4,'BTC','20180507','1400', 35.98),
+	(5,'BTC','20180507','1530', 33.56),
+
+	(6,'ETH','20180507','0900', 1.45),
+	(7,'ETH','20180507','1030', 1.87),
+	(8,'ETH','20180507','1245', 1.55),
+	(9,'ETH','20180507','1515', 2.01),
+	(10,'ETH','20180507','1700', 2.15),
+
+	(11,'LTC','20180507','0930', 14.32),
+	(12,'LTC','20180507','1115', 14.87),
+	(13,'LTC','20180507','1245', 15.03),
+	(14,'LTC','20180507','1400', 14.76),
+	(15,'LTC','20180507','1700', 14.15);
+	
+
+UNLOCK TABLES;
+
