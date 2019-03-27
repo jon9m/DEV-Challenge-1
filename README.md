@@ -1,4 +1,4 @@
-	Database setup		-
+	Database setup		- (MySQL)
 		run scripts in sql-scripts folder to create user and schema and insert data
 			01-create-user.sql
 			02-currency_exchange.sql			
